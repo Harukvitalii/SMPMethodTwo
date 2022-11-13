@@ -1,7 +1,7 @@
-import numpy as np
-from pprint import pp
 import copy
+from pprint import pp
 
+import numpy as np
 
 MATRIX = [
     [2,1,-2,18], 
@@ -17,11 +17,6 @@ Func = [2,-3,-6,1,0,0,0]
 # ]
 
 # Func = [5,6,1,1,0,0,0]
-
-print(len(MATRIX[0]))
-print(MATRIX[0])
-# Func = [0,	0,	-4,	-4,	0,	0,	0]
-
 
 
 class MT: 
@@ -71,13 +66,13 @@ class MT:
         
         # find stovbetzch
         mas = []
-        print('check mass', serline_mass)
+        # print('check mass', serline_mass)
         for i in range(len(serline_mass)-1): 
             t = True if serline_mass[i] < 0 else False   
             check = [abs(delta[i]), i]
         
             if t: mas.append(check) #and delta[i] != 0
-        print('mass check ', mas)
+        # print('mass check ', mas)
         if not mas: return 0,0,'end_error_no_minus_elements_in_stovbetsh'
         
         if len(mas) == 1: 
